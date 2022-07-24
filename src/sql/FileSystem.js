@@ -1,6 +1,6 @@
 import knexLib from 'knex'
 
-class ClienteSql {
+class FileSystem{
     constructor(config) {
       this.knex = knexLib(config)
     };
@@ -26,4 +26,4 @@ class ClienteSql {
     }
 }
 
-export {ClienteSql}
+export {FileSystem}

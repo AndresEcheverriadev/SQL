@@ -9,7 +9,7 @@ function enviarMensaje() {
     return false;
   }
 
-  socket.emit("mensajeNuevo", { email: email.value, text: mensaje.value });
+  socket.emit("mensajeNuevo", { email: email.value, texto: mensaje.value });
   mensaje.value = "";
   return false;
 }
@@ -18,7 +18,7 @@ socket.on("mensajes", (mensajes) => {
   let mensajesHtml = mensajes
     .map(
       (mensaje) =>
-        `<span>${mensaje.email} ${mensaje.timestamp} <b>${mensaje.text}</b></span>`
+        `<span>${mensaje.email} ${mensaje.timestamp} <b>${mensaje.texto}</b></span>`
     )
     .join("<br>");
 
